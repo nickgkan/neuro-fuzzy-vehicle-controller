@@ -1,4 +1,4 @@
-# Fuzzy and Neuro-Fuzzy Vehicle Controllers MATLAB Code
+# Fuzzy and Neuro-Fuzzy Vehicle Navigation MATLAB Code
 
 ## Requirements
 * MATLAB (tested with R2012b, R2015a and R2018a)
