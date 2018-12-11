@@ -1,0 +1,43 @@
+[System]
+Name='new_my_fuzzy_system_test'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='angle'
+Range=[0 180]
+NumMFs=3
+MF1='GoodAngle':'trimf',[-100.47619047619 -0.476190476190482 109.52380952381]
+MF2='BadAngle':'trimf',[80 180 280]
+MF3='VerticalAngle':'trimf',[85.95 90.95 95]
+
+[Input2]
+Name='obstacleDistance'
+Range=[0 400]
+NumMFs=3
+MF1='GoodDistance':'trapmf',[10.72 160.1 430 670]
+MF2='BadDistance':'zmf',[1 107.407407407407]
+MF3='WorstDistance':'zmf',[0 15]
+
+[Output1]
+Name='speed'
+Range=[0 15]
+NumMFs=3
+MF1='lowSpeed':'trimf',[-6 0 5]
+MF2='midSpeed':'trimf',[4.5 7.5 10.5]
+MF3='highSpeed':'trimf',[10 15 21]
+
+[Rules]
+1 1, 3 (1) : 1
+2 0, 1 (1) : 1
+1 2, 2 (1) : 1
+3 2, 3 (1) : 1
+0 3, 2 (1) : 1
