@@ -24,7 +24,12 @@ The second system performs better for the given maps but does not generalize wel
 ## Neuro-fuzzy systems
 Using the successful paths for each fuzzy system, we train a neuro-fuzzy system to navigate the vehicle without relying on hand-crafted rules. These models perform worse on seen maps that fuzzy systems overfit, but satisfactorily generalize to unseen maps, while diminishing oscillations near the target. Here, neurofuzzy_system_5_rules.fis outperforms neurofuzzy_system_3_rules.fis, most possibly due to more valid training data. This indicates that such a neuro-fuzzy system can perform poorly in lack of enough training samples.
 
+## Results
+<p align="center">
+  <img src="https://github.com/nickgkan/neuro-fuzzy-vehicle-controller/blob/master/animation.gif?raw=true" alt="Sublime's custom image"/>
+</p>
+
 ## Next step?
-The problem under these specifications can not be solved in many cases. An interesting approach would combine fuzzy modeling with memory, trial-and-error approaches or decision trees. Another appealing approach would be to learn the fuzzy rules via reinforcement learning.
+Under these specifications, there many cases the problem can not be solved. An interesting approach would be to combine fuzzy modeling with memory, trial-and-error approaches or decision trees. Another appealing approach would be to learn the fuzzy rules via reinforcement learning.
 
 [Fuzzy Logic]: <https://www.mathworks.com/help/fuzzy/what-is-fuzzy-logic.html>
